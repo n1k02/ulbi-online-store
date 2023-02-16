@@ -8,13 +8,13 @@ const DeviceItem = ({device}) => {
     const navigate = useNavigate()
 
     return (
-        <Col md={3} className={"mt-3"} onClick={()=> navigate(DEVICE_ROUTE + '/' + device.id)}>
-            <Card style ={{width: 150, cursor: "pointer"}} border={"light"}>
+        <Col md={3} className={"mt-3"}>
+            <Card style ={{width: 150, cursor: "pointer"}} border={"light"}  onClick={()=> navigate(DEVICE_ROUTE + '/' + device.id)}>
                 <Image width={150} height={150} src={device.img}/>
                 <div className={"d-flex justify-content-between align-items-center mt-1 text-black-50"}>
                     <div>Samsung...</div>
                     <div className={"d-flex align-items-center"}>
-                        <div>{device.rating}</div>
+                        <div className={'me-1'}>{device.rating}</div>
                         <Image src={star} width={18} height={18}></Image>
                     </div>
                 </div>
