@@ -8,14 +8,7 @@ import {createBrowserRouter} from "react-router-dom";
 import Layout from "./components/Layout";
 
 export const authRoutes = [
-    {
-        path: ADMIN_ROUTE,
-        element: <Admin/>
-    },
-    {
-        path: BASKET_ROUTE,
-        element: <Basket/>
-    }
+
 ]
 
 export const publicRoutes = [
@@ -23,6 +16,14 @@ export const publicRoutes = [
       path: "/",
       element: <Layout/>,
       children: [
+          {
+              path: ADMIN_ROUTE,
+              element: <Admin/>
+          },
+          {
+              path: BASKET_ROUTE,
+              element: <Basket/>
+          },
           {
               path: SHOP_ROUTE,
               element: <Shop/>,
